@@ -9,7 +9,7 @@ install:
 
 before_script:
   - env | sort
-  - wget -qO- 'https://github.com/tianon/pgp-happy-eyeballs/raw/master/hack-my-builds.sh' | bash
+#   - wget -qO- 'https://github.com/tianon/pgp-happy-eyeballs/raw/master/hack-my-builds.sh' | bash
   - cd "$CONTEXT"
   - image="travis/eureka:$(sed 's!/!-!g' <<<"$CONTEXT")"
 
