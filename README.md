@@ -1,16 +1,17 @@
-# https://github.com/ygqygq2/eureka-docker
+# eureka-docker
 
-## Maintained by: [ygqygq2](https://github.com/ygqygq2/eureka-docker)
+![Docker Automated build](https://img.shields.io/docker/cloud/automated/ygqygq2/eureka-docker.svg) ![Docker Build Status](https://img.shields.io/docker/cloud/build/ygqygq2/eureka-docker.svg) ![Docker Stars](https://img.shields.io/docker/stars/ygqygq2/eureka-docker.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/ygqygq2/eureka-docker.svg)
 
-This is the Git repo of the docker image for [`eureka`](https://hub.docker.com/r/ygqygq2/eureka). See [the Docker Hub page](https://hub.docker.com/r/ygqygq2/eureka) for the full readme on how to use this Docker image and for information regarding contributing and issues.
+# Supported tags and respective `Dockerfile` links
 
----
+- [`latest` (*Dockerfile*)](https://github.com/ygqygq2/eureka-docker/blob/master/Dockerfile) [![](https://images.microbadger.com/badges/image/ygqygq2/eureka-docker.svg)](http://microbadger.com/images/ygqygq2/eureka-docker "Get your own image badge on microbadger.com")
 
--	[![build status badge](https://img.shields.io/travis/ygqygq2/eureka-docker/master.svg?label=Travis%20CI)](https://travis-ci.org/ygqygq2/eureka-docker/branches)
--	[![build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/update.sh/job/eureka-docker.svg?label=Automated%20update.sh)](https://doi-janky.infosiftr.net/job/update.sh/job/eureka-docker)
+# Mysql exec sql files.
+use mysql client to execute sql files.
 
-| Build | Status | Badges | (per-arch) |
-|:-:|:-:|:-:|:-:|
-| [![amd64 build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/amd64/job/eureka-docker.svg?label=amd64)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/eureka-docker) | [![arm32v7 build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/eureka-docker.svg?label=arm32v7)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/eureka-docker) | [![arm64v8 build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/eureka-docker.svg?label=arm64v8)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/eureka-docker) | [![ppc64le build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/eureka-docker.svg?label=ppc64le)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/eureka-docker) |
-| [![s390x build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/s390x/job/eureka-docker.svg?label=s390x)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/eureka-docker) | [![put-shared build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/put-shared/job/light/job/eureka-docker.svg?label=put-shared)](https://doi-janky.infosiftr.net/job/put-shared/job/light/job/eureka-docker) |
+## Simplest docker run example
+
+```
+docker run --rm -e MYSQL_HOST=10.100.206.6 -e MYSQL_PORT=3306 -e MYSQL_USER=root -e MYSQL_PASSWD=123456 -e MYSQL_DB=test -e SQL_FILES="/tmp/1.sql /tmp/2.sql" -v /tmp/1.sql:/tmp/1.sql -v /tmp/2.sql:/tmp/2.sql ygqygq2/eureka-docker:latest /tmp/1.sql /tmp/2.sql
+```
 

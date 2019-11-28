@@ -16,7 +16,3 @@ RUN mkdir eureka && \
 ADD *.properties /tomcat/webapps/eureka/WEB-INF/classes/
   
 EXPOSE 8080
-
-ENTRYPOINT ["/usr/local/tomcat/bin/catalina.sh"]
-
-CMD ["run"]
