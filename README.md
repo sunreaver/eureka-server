@@ -6,9 +6,6 @@
 
 - [`latest` (*Dockerfile*)](https://github.com/ygqygq2/eureka-docker/blob/master/Dockerfile) [![](https://images.microbadger.com/badges/image/ygqygq2/eureka.svg)](http://microbadger.com/images/ygqygq2/eureka "Get your own image badge on microbadger.com")
 
-# Mysql exec sql files.
-use mysql client to execute sql files.
-
 ## Simplest docker run example
 
 ```
