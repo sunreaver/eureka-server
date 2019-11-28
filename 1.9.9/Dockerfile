@@ -13,6 +13,6 @@ RUN mkdir eureka && \
   jar xf eureka-server-${EUREKA_VERSION}.war && \
   rm eureka-server-${EUREKA_VERSION}.war
 
-ADD *.properties /tomcat/webapps/eureka/WEB-INF/classes/
+ADD *.properties /usr/local/tomcat/webapps/eureka/WEB-INF/classes/
   
 EXPOSE 8080
