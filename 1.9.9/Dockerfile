@@ -1,4 +1,4 @@
-FROM tomcat:9-jdk8
+FROM tomcat:7-jdk8
 
 LABEL maintainer "29ygq@sina.com"
 
