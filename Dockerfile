@@ -1,4 +1,4 @@
-FROM maven:3.2.5-jdk-8-alpine as builder
+FROM maven:3.5-jdk-8-alpine as builder
 
 WORKDIR /usr/src/mymaven
 

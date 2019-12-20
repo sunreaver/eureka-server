@@ -4,7 +4,7 @@
 
 # Supported tags and respective `Dockerfile` links
 
-- [`v1.9.9` (*Dockerfile*)](https://github.com/ygqygq2/eureka-server/blob/master/Dockerfile) [![](https://images.microbadger.com/badges/image/ygqygq2/eureka-server.svg)](http://microbadger.com/images/ygqygq2/eureka-server "Get your own image badge on microbadger.com")
+- [`latest` (*Dockerfile*)](https://github.com/ygqygq2/eureka-server/blob/master/Dockerfile) [![](https://images.microbadger.com/badges/image/ygqygq2/eureka-server.svg)](http://microbadger.com/images/ygqygq2/eureka-server "Get your own image badge on microbadger.com")
 
 ## Simplest docker run example
 
