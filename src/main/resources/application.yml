@@ -5,12 +5,14 @@ spring:
   application:
     name: eureka-server
 
+EUREKA_ADDRESS_LIST: http://${eureka.instance.hostname}:${server.port}/eureka/
+
 eureka:
   instance:
     hostname: ${HOSTNAME:localhost}
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: ${EUREKA_ADDRESS_LIST}
     register-with-eureka: ${REGISTER_WITH_EUREKA:false} #  默认为 true。设为 false，仅作为服务中心，不作为服务客户端。
     fetch-registry: ${FETCH_REGISTRY:false} # 默认为true。设为false，不从服务中心检索注册的服务。
   server:
