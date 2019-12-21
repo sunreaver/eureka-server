@@ -3,9 +3,9 @@ FROM maven:3.6-jdk-8-alpine as builder
 WORKDIR /usr/src/mymaven
 
 COPY . .
-COPY maven-settings.xml /usr/share/maven/conf/settings.xml 
+#COPY maven-settings.xml /usr/share/maven/conf/settings.xml 
 
-RUN mvn -B package --file pom.xml
+RUN mvn -B install --file pom.xml
 
 FROM openjdk:8-jdk-alpine
 
