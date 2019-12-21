@@ -15,17 +15,6 @@
     <description>Euerka Server</description>
 
     <properties>
-        <!-- 仓库地址 -->
-        <registryUrl>docker.io</registryUrl>
-        <!--注意仓库名 -->
-        <registryProject>ygqygq2</registryProject>
-        <!-- docker iamge名 -->
-        <dockerImageName>${project.artifactId}</dockerImageName>
-        <!-- docker iamge tag -->
-        <dockerImageTag>${project.version}</dockerImageTag>
-        <!-- docker image 完整url -->
-        <dockerImageUrl>${registryUrl}/${registryProject}/${dockerImageName}:${dockerImageTag}</dockerImageUrl>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -56,51 +45,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.5.9.RELEASE</version>
-            </plugin>
-
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>dockerfile-maven-plugin</artifactId>
-                <version>1.4.12</version>
-                <configuration>
-                    <repository>${registryUrl}/${registryProject}/${dockerImageName}</repository>
-                    <tag>${dockerImageTag}</tag>
-                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-                    <buildArgs>
-                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>tag-image</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>tag</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>push-image</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>push</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

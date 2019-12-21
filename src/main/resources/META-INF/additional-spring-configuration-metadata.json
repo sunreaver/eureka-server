@@ -1,8 +1,0 @@
-{
-  "properties": [
-    {
-      "name": "EUREKA_ADDRESS_LIST",
-      "type": "java.lang.String",
-      "description": "Description for EUREKA_ADDRESS_LIST."
-  }
-] }
