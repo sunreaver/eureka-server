@@ -9,5 +9,5 @@
 ## Simplest docker run example
 
 ```
-docker run --rm ygqygq2/eureka-server:latest
+docker run --name eureka-server -d -p8761:8761 ygqygq2/eureka-server:latest
 ```
