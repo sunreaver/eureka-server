@@ -9,7 +9,7 @@ RUN mvn -B install --file pom.xml
 
 FROM openjdk:8-jdk-alpine
 
-LABEL maintainer "29ygq@sina.com"
+LABEL maintainer "tanwei@msn.com"
 
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/lib:/data/lib
 
